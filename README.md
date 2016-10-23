@@ -3,12 +3,16 @@
 UVC gadget test application Readme
 
 Copyright (C) 2010 Ideas on board SPRL
+
 Copyright (C) 2013 ST Microelectronics Ltd.
+
 Copyright (C) 2016 Flextronics International
 
 Contacts:
 Laurent Pinchart <laurent.pinchart@xxxxxxxxxxxxxxxx>
+
 Bhupesh Sharma <bhupesh.sharma@xxxxxx>
+
 Frank Earl <linusti@xxxxxxxxx>
 
 
