@@ -36,7 +36,7 @@
 #include <linux/usb/video.h>
 #include <linux/videodev2.h>
 
-#include "../drivers/usb/gadget/uvc.h"
+#include "uvc.h"
 
 /* Enable debug prints. */
 #undef ENABLE_BUFFER_DEBUG
@@ -740,6 +740,14 @@ v4l2_close(struct v4l2_device *dev)
  * UVC generic stuff
  */
 
+# if 0
+
+/*
+ * FIXME -- Need to see what this was intended for on the UVC gadget side.  It's
+ * 			here, but there's nothing TIED to it right now on the gadget server
+ * 			end of things.  Commenting it out to remove warnings.
+ */
+
 static int
 uvc_video_set_format(struct uvc_device *dev)
 {
@@ -768,6 +776,8 @@ uvc_video_set_format(struct uvc_device *dev)
 
 	return 0;
 }
+
+#endif //#if 0
 
 static int
 uvc_video_stream(struct uvc_device *dev, int enable)
@@ -1861,7 +1871,7 @@ uvc_events_process_data(struct uvc_device *dev, struct uvc_request_data *data)
 {
 	struct uvc_streaming_control *target;
 	struct uvc_streaming_control *ctrl;
-	struct v4l2_format fmt;
+	//struct v4l2_format fmt;				// FIXME -- Unused right now.
 	const struct uvc_format_info *format;
 	const struct uvc_frame_info *frame;
 	const unsigned int *interval;
