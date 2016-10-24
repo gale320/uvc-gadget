@@ -14,5 +14,6 @@ SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -W -Wall -g")
 ADD_EXECUTABLE(uvc-gadget uvc-gadget.c)
 
 # Define our install path so that CMake knows we need a "make install"
+SET(CMAKE_INSTALL_PREFIX "/usr")
 INSTALL(PROGRAMS uvc-gadget DESTINATION sbin)
 
